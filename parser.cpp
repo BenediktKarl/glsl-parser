@@ -1099,7 +1099,7 @@ CHECK_RETURN astExpression *parser::parseUnaryPrefix(endCondition condition) {
     } else if (condition == kEndConditionBracket) {
         return 0;
     }
-    fatal("syntax error during unary prefix");
+    fatal("-syntax error during unary prefix");
     return 0;
 }
 

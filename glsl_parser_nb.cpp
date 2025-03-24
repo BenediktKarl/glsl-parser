@@ -14,7 +14,7 @@ std::vector<std::string> get_glsl_function_names(const std::string& glsl_source)
     glsl::astTU* tu = glsl_parser.parse(glsl::astTU::kCompute);
 
     if (tu == nullptr) {
-        std::cerr << "AST is null" << std::endl;
+        std::cerr << glsl_parser.error() << std::endl;
         return {};
     }
 
